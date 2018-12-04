@@ -1,0 +1,31 @@
+{
+  "name": "chinese-numerals",
+  "version": "0.1.0",
+  "description": "convert arabic number to chinese number",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "scripts": {
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c rollup.config.ts",
+    "test": "tsc -p test/tsconfig.json && mocha build/test/index.test.js"
+  },
+  "author": "lostpigz",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/assert": "^1.4.0",
+    "@types/mocha": "^5.2.5",
+    "assert": "^1.4.1",
+    "mocha": "^5.2.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.1.6"
+  }
+}
